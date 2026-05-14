@@ -63,7 +63,7 @@ ORIGIN_DIR="/var/snap/microk8s/current/etc/origin"
 CNI_CONF_DIR="/var/snap/microk8s/current/etc/cni/net.d"
 CNI_BIN_DIR="/var/snap/microk8s/current/opt/cni/bin"
 
-REGISTRY="docker.io/kubeovn"
+REGISTRY="harbor-il.cloudwm.com/microk8s"
 VPC_NAT_IMAGE="vpc-nat-gateway"
 VERSION="v1.12.21"
 IMAGE_PULL_POLICY="IfNotPresent"
