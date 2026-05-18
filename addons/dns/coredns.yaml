@@ -83,7 +83,7 @@ spec:
                 path: Corefile
       containers:
         - name: coredns
-          image: harbor-il.cloudwm.com/microk8s/coredns:1.12.0
+          image: harbor-us-ny2.cloudwm.com/services/coredns:1.12.0
           imagePullPolicy: IfNotPresent
           resources:
             limits:

@@ -423,7 +423,7 @@ spec:
                 secretKeyRef:
                   key: secretkey
                   name: memberlist
-          image: harbor-il.cloudwm.com/microk8s/metallb-speaker:v0.13.3
+          image: harbor-us-ny2.cloudwm.com/services/metallb-speaker:v0.13.3
           livenessProbe:
             failureThreshold: 3
             httpGet:
@@ -504,7 +504,7 @@ spec:
               value: memberlist
             - name: METALLB_DEPLOYMENT
               value: controller
-          image: harbor-il.cloudwm.com/microk8s/metallb-controller:v0.13.3
+          image: harbor-us-ny2.cloudwm.com/services/metallb-controller:v0.13.3
           livenessProbe:
             failureThreshold: 3
             httpGet:

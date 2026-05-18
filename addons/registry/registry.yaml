@@ -36,7 +36,7 @@ spec:
     spec:
       containers:
         - name: registry
-          image: harbor-il.cloudwm.com/microk8s/registry:2.8.3
+          image: harbor-us-ny2.cloudwm.com/services/registry:2.8.3
           env:
             - name: REGISTRY_HTTP_ADDR
               value: :5000
