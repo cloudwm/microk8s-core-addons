@@ -19,7 +19,7 @@ spec:
       serviceAccountName: microk8s-hostpath
       containers:
         - name: hostpath-provisioner
-          image: harbor-us-ny2.cloudwm.com/services/hostpath-provisioner:1.5.0
+          image: harbor-us-ny2.cloudwm.com/dockerhub/cdkbot/hostpath-provisioner:1.5.0
           env:
             - name: NAMESPACE
               valueFrom:
@@ -32,7 +32,7 @@ spec:
             - name: PV_DIR
               value: $SNAP_COMMON/default-storage
             - name: BUSYBOX_IMAGE
-              value: harbor-us-ny2.cloudwm.com/services/busybox:1.28.4
+              value: harbor-us-ny2.cloudwm.com/dockerhub/library/busybox:1.37.0
           #   - name: PV_RECLAIM_POLICY
           #     value: Retain
           volumeMounts:

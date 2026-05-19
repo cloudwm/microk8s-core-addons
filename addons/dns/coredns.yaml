@@ -83,7 +83,7 @@ spec:
                 path: Corefile
       containers:
         - name: coredns
-          image: harbor-us-ny2.cloudwm.com/services/coredns:1.12.0
+          image: harbor-us-ny2.cloudwm.com/dockerhub/coredns/coredns:1.14.3
           imagePullPolicy: IfNotPresent
           resources:
             limits:
