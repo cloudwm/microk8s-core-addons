@@ -6,7 +6,7 @@ rbac:
 # Configuration for etcd-operator chart
 etcd-operator:
   operator:
-    image: cdkbot/etcd-operator:0.10.0-microk8s-3
+    image: harbor-us-ny2.cloudwm.com/dockerhub/cdkbot/etcd-operator:0.10.0-microk8s-3
     enabled: true
   rbac:
     enabled: true
@@ -17,7 +17,7 @@ etcd-operator:
         limitSizeToMaxReadyNodes: true
         version: "3.5.4"
         pod:
-          busyboxImage: busybox:1.28.4
+          busyboxImage: harbor-us-ny2.cloudwm.com/dockerhub/library/busybox:1.28.4
           restartPolicy: Always
           hostPathVolume: "/var/snap/microk8s/common/mayastor/etcd/$NAME"
           ClusterDomain: .cluster.local.
@@ -54,12 +54,12 @@ mayastor:
   nodeSelector:
 
   image:
-    repo: cdkbot
+    repo: harbor-us-ny2.cloudwm.com/dockerhub/cdkbot
     tag: v2.0.0-microk8s-1
     pullPolicy: IfNotPresent
 
   base:
-    busyboxImage: busybox:1.28.4
+    busyboxImage: harbor-us-ny2.cloudwm.com/dockerhub/library/busybox:1.28.4
     metrics:
       enabled: false
 
@@ -97,7 +97,7 @@ mayastor:
     autoCreateImageSize: "20G"
     extraInitContainers:
       - name: initialize-pool
-        image: curlimages/curl:7.81.0
+        image: harbor-us-ny2.cloudwm.com/dockerhub/curlimages/curl:7.81.0
         env:
           - name: MY_NODE_NAME
             valueFrom:
